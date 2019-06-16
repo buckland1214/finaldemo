@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>商品</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/goods_1.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- HEARDR -->
+    <nav class="navbar  fixed-to navbar-expand-lg navbar-dark bg-dark py-2 ">
+        <a class="navbar-brand" href="index.html">GO PHOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="member.html">會員專區 <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <!-- Search form -->
+            <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div>
+            <!--會員登錄 START -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form class="box" action="index.html" method="post">
+                            <h1>Login</h1>
+                            <input type="text" name="" placeholder="Username">
+                            <input type="password" name="" placeholder="Password">
+                            <input type="submit" name="" value="Login">
+                            <div><a href="#">Create a new account?</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--會員登錄 END -->
+            <!-- 購物車 START -->
+            <div class="modal fade" id="CART" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12 mb-5">
+                                <h4 class="title-color">購物車</h4>
+                                <div class="d-block sidebar-product-list">
+                                    <a href="product.html" class="d-inline-block">
+                                        <img src="./images/product/momo.jpg" alt="商品" class="d-inline-block product-list-img">
+                                        <h6 class="d-inline-block">商品</h6>
+                                    </a>
+                                    <p class="d-block text-secondary pl-4">
+                                        <span class="text-warning">1</span>&nbsp;X&nbsp;NT$500
+                                    </p>
+                                </div>
+                                <div class="d-block sidebar-product-list">
+                                    <a href="product.html" class="d-inline-block">
+                                        <img src="./images/product/iphone.jpg" alt="商品" class="d-inline-block product-list-img">
+                                        <h6 class="d-inline-block">商品</h6>
+                                    </a>
+                                    <p class="d-block text-secondary pl-4">
+                                        <span class="text-warning">1</span>&nbsp;X&nbsp;NT$500
+                                    </p>
+                                </div>
+                                <div class="d-block sidebar-product-list">
+                                    <a href="product.html" class="d-inline-block">
+                                        <img src="./images/product/iphone.jpg" alt="商品" class="d-inline-block product-list-img">
+                                        <h6 class="d-inline-block">商品</h6>
+                                    </a>
+                                    <p class="d-block text-secondary pl-4">
+                                        <span class="text-warning">1</span>&nbsp;X&nbsp;NT$500
+                                    </p>
+                                </div>
+                                <div class="d-block mt-1 mb-3">
+                                    <a href="checkout.html" class="btn btn-secondary btn-block text-white" role="button">結帳</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 購物車 END -->
+            <!--會員登錄&購物車BTN -->
+            <button type="button" class="btnnav" data-toggle="modal" data-target="#exampleModal">
+                會員登入
+            </button>
+            <button type="button" class="btnnav" data-toggle="modal" data-target="#CART">
+                購物車
+            </button>
+            <!--會員登錄&購物車BTN -->
+        </div>
+    </nav>
+    <!--header end-->
+    <div class="album py-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height:  25rem;">
+                        <a href=""></a>
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height:  25rem;">
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height: 25rem;">
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height: 25rem;">
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height: 25rem;">
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height: 25rem;">
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height: 25rem;">
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height: 25rem;">
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm gb" style="height: 25rem;">
+                        <img class="card-img-top gp" src="./images/product/asusROG.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">商品名稱:</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="car.html" class="aa">加入購物車</a>
+                                    </button>
+                                    <button type="button" class="btn btn- btn-outline-secondary">
+                                        <a href="TT_3.html" class="aa">差看商品</a></button>
+                                </div>
+                                <small class="text-muted">剩餘:10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small unique-color-dark">
+        <div style="background-color: #2ecc71;">
+            <div class="gg py-3">
+                您是第 1 位顧客
+            </div>
+        </div>
+        <div class="container text-center text-md-left mt-5">
+            <div class="row">
+                <div class="col-md-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="">服務時間</h6>
+                    <hr class="mb-4 mt-0 d-inline-block" style="width">
+                    <p>平日週一至週五 09:00 ~ 23:00</p>
+                    <p>週末及國定假日 12:00 ~ 19:00</p>
+                    <p><i class="fas fa-phone mr-3"></i>服務號碼 (02)2518-2749</p>
+                    <a href="mailto:tonight0919@gmail.com" style="color: #FFF;"><i class="fas fa-envelope mr-3"></i>聯絡我們</a>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="">版權所有</h6>
+                    <hr class=" mb-4 mt-0 d-inline-block" style="width: 60px;">
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="">前端製作</h6>
+                    <hr class=" mb-4 mt-0 d-inline-block" style="width: 60px;">
+                    <img src="./images/product/twice.jpg" style="width: 70%;">
+                    <p>
+                        <a href=""><img src="icon/fb.png" style="width: 35px;"></a>
+                        <a href=""><img src="icon/ig.png" style="width: 30px;"></a>
+                        <a href=""><img src="icon/Github.png" style="width: 35px;"></a>
+                    </p>
+                    <img src="./images/product/twice.jpg" style="width: 70%;">
+                    <p>
+                        <a href=""><img src="icon/fb.png" style="width: 35px;"></a>
+                        <a href=""><img src="icon/ig.png" style="width: 30px;"></a>
+                        <a href=""><img src="icon/Github.png" style="width: 35px;"></a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2  mx-auto mb-4">
+                    <h6 class="">後台製作</h6>
+                    <hr class=" mb-4 mt-0 d-inline-block" style="width: 60px;">
+                    <img src="./images/product/twice.jpg" style="width: 70%;">
+                    <p>
+                        <a href=""><img src="icon/fb.png" style="width: 35px;"></a>
+                        <a href=""><img src="icon/ig.png" style="width: 30px;"></a>
+                        <a href=""><img src="icon/Github.png" style="width: 35px;"></a>
+                    </p>
+                    <img src="./images/product/twice.jpg" style="width: 70%;">
+                    <p>
+                        <a href=""><img src="icon/fb.png" style="width: 35px;"></a>
+                        <a href=""><img src="icon/ig.png" style="width: 30px;"></a>
+                        <a href=""><img src="icon/Github.png" style="width: 35px;"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>

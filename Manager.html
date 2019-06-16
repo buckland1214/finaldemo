@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>管理分頁</title>
+    <title>index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Manager.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+    </style>
+</head>
+
+<body>
+    <!-- HEARDR -->
+    <nav class="navbar  fixed-to navbar-expand-lg navbar-dark bg-dark py-2 ">
+        <a class="navbar-brand" href="index.html">GO PHOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="member.html">會員專區 <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <!-- Search form -->
+            <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div>
+            <!--會員登錄 START -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form class="box" action="index.html" method="post">
+                            <h1>Login</h1>
+                            <input type="text" name="" placeholder="Username">
+                            <input type="password" name="" placeholder="Password">
+                            <input type="submit" name="" value="Login">
+                            <div><a href="#">Create a new account?</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--會員登錄 END -->
+            <!-- 購物車 START -->
+            <div class="modal fade" id="CART" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 購物車 END -->
+            <!--會員登錄&購物車BTN -->
+            <button type="button" class="btnnav" data-toggle="modal" data-target="#exampleModa">
+                會員登出
+            </button>
+            <!--會員登錄&購物車BTN -->
+        </div>
+    </nav>
+    <!--header end-->
+    <!-- sidebar -->
+    <section>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a id="a1" href="javascript:;" onclick="change()">會員管理</a>
+            <a href="javascript:product();" id="gg" class="">修改商品</a>
+            <a href="javascript:ordder();" id="orderr" class="">訂單管理</a>
+            <a href="javascript:checkk();" id="check" class="">訂單一覽</a>
+        </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        <h2 style="text-align: center;">管理者頁面</h2>
+        <div class="content">
+            <div id="d1" style="display: none">
+                會員資料查詢<input class="inputx" type="text" name="" required placeholder="請輸入會員ID">
+                <a href="javascript:divShow();" id="btnhref" class="btn-slide">搜尋</a>
+            </div>
+            <div id="btnshow" style="display: none;">
+                <p>會員帳號:<label>bucbuc</label><input class="inputx" type="" name=""></p>
+                <p>會員密碼:<label>bucbuc</label><input class="inputx" type="" name=""></p>
+                <p>電子信箱:<label>bucbuc</label><input class="inputx" type="" name=""></p>
+                <p>會員權限:<label>bucbuc</label><input class="inputx" type="" name=""></p>
+                <p>電話號碼:<label>bucbuc</label><input class="inputx" type="" name=""></p>
+                <input type="button" name="" onclick="GoManager()" value="修改資料">
+            </div>
+            <div id="bb" style="display: none;">
+                <p>輸入商品編號<input class="inputx" type="" name=""></p>
+                <p>商品名稱<input class="inputx" type="" name=""></p>
+                <p>商品價格<input class="inputx" type="" name=""></p>
+                <p>新增庫存<input class="inputx" type="" name=""></p>
+                <p>商品內容<input class="inputx" type="" name=""></p>
+                <input type="button" name="" onclick="GoManager()" value="修改商品">
+            </div>
+            <div id="order" style="display: none;">
+                <p>訂單編號<input class="inputx" type="" name=""></p>
+                <p>訂單編號<input class="inputx" type="" name=""></p>
+                <p>訂單編號<input class="inputx" type="" name=""></p>
+                <p>訂單編號<input class="inputx" type="" name=""></p>
+                <p>訂單編號<input class="inputx" type="" name=""></p>
+                <input type="button" name="" onclick="GoManager()" value="訂單修改">
+            </div>
+            <div id="checkorder" style="display: none;" class="container">
+                <table width="600" border="1" rules="rows" class="check">
+                    <tr>
+                        <td>
+                            訂單編號
+                        </td>
+                        <td>
+                            操作
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td>
+                            <a href="">321456987</a>
+                        </td>
+                        <td>
+                            <label>刪除</label>
+                            <input type="checkbox" name="" value="刪除">
+                        </td>
+                    </tr>
+                </table>
+                <input type="button" name="" onclick="GoManager()" value="訂單修改" style="margin-top: 50px;">
+            </div>
+    </section>
+    <!-- sidebar -->
+    <script>
+    /* sidebar 控制*/
+
+    /* sidebar 滑動*/
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    /* sidebar 滑動*/
+
+    /* 會員管理 */
+    var isShow = false;
+
+    function change() {
+        if (!isShow) {
+            isShow = true;
+            document.getElementById('d1').style.display = '';
+            document.getElementById('a1').innerText = "會員管理";
+        }
+    }
+
+    function divShow() {
+        document.getElementById("btnshow").style.display = "block";
+        document.getElementById("btnhref").innerHTML = "重新查詢";
+        document.getElementById("btnhref").href = "javascript:divhidden()";
+    }
+
+    function divhidden() {
+        document.getElementById("btnshow").style.display = "none";
+        document.getElementById("btnhref").innerHTML = "搜尋";
+        document.getElementById("btnhref").href = "javascript:divShow()";
+    }
+    /* 會員管理 */
+
+    /* 修改商品 */
+    function product() {
+        document.getElementById("bb").style.display = "block";
+        document.getElementById("gg").innerHTML = "修改商品";
+        document.getElementById("gg").href = "javascript:prod()";
+    }
+
+    function prod() {
+        document.getElementById("bb").style.display = "none";
+        document.getElementById("gg").innerHTML = "修改商品";
+        document.getElementById("gg").href = "javascript:product()";
+    }
+    /* 修改商品 */
+
+    /* 訂單管理 */
+    function ordder() {
+        document.getElementById("order").style.display = "block";
+        document.getElementById("orderr").innerHTML = "訂單管理";
+        document.getElementById("orderr").href = "javascript:ord()";
+    }
+
+    function ord() {
+        document.getElementById("order").style.display = "none";
+        document.getElementById("orderr").innerHTML = "訂單管理";
+        document.getElementById("orderr").href = "javascript:ordder()";
+    }
+    /* 訂單管理 */
+
+    /* 訂單一覽 */
+    function checkk() {
+        document.getElementById("checkorder").style.display = "block";
+        document.getElementById("check").innerHTML = "訂單一覽";
+        document.getElementById("check").href = "javascript:chec()";
+    }
+
+    function chec() {
+        document.getElementById("checkorder").style.display = "none";
+        document.getElementById("check").innerHTML = "訂單一覽";
+        document.getElementById("check").href = "javascript:checkk()";
+    }
+    /* 訂單一覽 */
+
+    /* sidebar 控制*/
+
+    /* 網頁重置*/
+    function GoManager() {
+        alert("修改完成");
+        document.location.href = "Manager.html";
+    }
+    /* 網頁重置*/
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.gp{
+	width: 80%;
+}
+.gb{
+	background:#191919;
+}
+.aa{
+	color: gray;
+}
+a:hover{
+	color: #fff;
+	text-decoration: none;
+}
