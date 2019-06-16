@@ -1,0 +1,31 @@
+/*隱藏*/
+#panel, .flip {
+	height: 10px;	
+}
+
+#panel {
+  display: none;
+}
+.order{
+	position: relative;
+	margin-right: 0;
+	float: left;
+}
+.orders{
+	position: relative;
+	margin-right: 0;
+	float: right;
+}
+.small{
+	font-size: 15px;
+	padding: 5px;
+}
+.mc{
+	color: #fff;
+}
+label{
+	color: #FFF;
+}
+tr{
+	color: #fff;
+}

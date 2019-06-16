@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/goods.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+      background: #;
+      color: ;
+    }
+
+  </style>
+</head>
+
+<body>
+    <!-- HEARDR -->
+    <nav class="navbar  fixed-to navbar-expand-lg navbar-dark bg-dark py-2 ">
+        <a class="navbar-brand" href="index.html">GO PHOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">首頁 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="member.html">會員專區 <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <!-- Search form -->
+            <div class="md-form mt-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            </div>
+            <!--會員登錄 START -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form class="box" action="index.html" method="post">
+                            <h1>Login</h1>
+                            <input type="text" name="" placeholder="Username">
+                            <input type="password" name="" placeholder="Password">
+                            <input type="submit" name="" value="Login">
+                            <div><a href="#">Create a new account?</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--會員登錄 END -->
+            <!-- 購物車 START -->
+            <div class="modal fade" id="CART" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12 mb-5">
+                                <h4 class="title-color">購物車</h4>
+                                <div class="d-block sidebar-product-list">
+                                    <a href="product.html" class="d-inline-block">
+                                        <img src="./images/product/momo.jpg" alt="商品" class="d-inline-block product-list-img">
+                                        <h6 class="d-inline-block">商品</h6>
+                                    </a>
+                                    <p class="d-block text-secondary pl-4">
+                                        <span class="text-warning">1</span>&nbsp;X&nbsp;NT$500
+                                    </p>
+                                </div>
+                                <div class="d-block sidebar-product-list">
+                                    <a href="product.html" class="d-inline-block">
+                                        <img src="./images/product/iphone.jpg" alt="商品" class="d-inline-block product-list-img">
+                                        <h6 class="d-inline-block">商品</h6>
+                                    </a>
+                                    <p class="d-block text-secondary pl-4">
+                                        <span class="text-warning">1</span>&nbsp;X&nbsp;NT$500
+                                    </p>
+                                </div>
+                                <div class="d-block sidebar-product-list">
+                                    <a href="product.html" class="d-inline-block">
+                                        <img src="./images/product/iphone.jpg" alt="商品" class="d-inline-block product-list-img">
+                                        <h6 class="d-inline-block">商品</h6>
+                                    </a>
+                                    <p class="d-block text-secondary pl-4">
+                                        <span class="text-warning">1</span>&nbsp;X&nbsp;NT$500
+                                    </p>
+                                </div>
+                                <div class="d-block mt-1 mb-3">
+                                    <a href="checkout.html" class="btn btn-secondary btn-block text-white" role="button">結帳</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 購物車 END -->
+            <!--會員登錄&購物車BTN -->
+            <button type="button" class="btnnav" data-toggle="modal" data-target="#exampleModal">
+                會員登入
+            </button>
+            <button type="button" class="btnnav" data-toggle="modal" data-target="#CART">
+                購物車
+            </button>
+            <!--會員登錄&購物車BTN -->
+        </div>
+    </nav>
+    <!--header end-->
+    <section>
+        <div class="container come">
+            <div class="row">
+                <div class="col-3"></div>
+                <img src="./images/product/asusROG.png" / style="height: 250px;">
+                <div class="col-5" style="font-family: DFKai-sb;">
+                    <h2>名稱:ASUS ZenFone Max Pro M2 ZB631KL 128</h2>
+                    <h4>價格 : 9999元</h4>
+                    <form id='myform' method='POST' action='#'>
+                        <h4>數量 :
+                            <label for=""></label>
+                            <input type='button' value='-' class='qtyminus' field='quantity' />
+                            <input type='text' name='quantity' value='0' class='qty' />
+                            <input type='button' value='+' class='qtyplus' field='quantity' />
+                            個</h4>
+                    </form>
+                    <h4>庫存 : 60個</h4>
+                    <button class="button">立即購買</button>
+                    <button class="button">加入購物車</button>
+                </div>
+                <script>
+                    $(function() {
+                    // 按鈕,增加
+                    $('.qtyplus').click(function(e) {
+                        // 停止按鈕
+                        e.preventDefault();
+                        // 得到名稱
+                        fieldName = $(this).attr('field');
+                        // 取值
+                        var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                        //如果是空的
+                        if (!isNaN(currentVal)) {
+                            // 增值
+                            $('input[name=' + fieldName + ']').val(currentVal + 1);
+                        } else {
+                            // 放0
+                            $('input[name=' + fieldName + ']').val(0);
+                        }
+                    });
+                    // 按鈕，減少到0
+                    $(".qtyminus").click(function(e) {
+                        // 停止按鈕
+                        e.preventDefault();
+                        // 取名稱
+                        fieldName = $(this).attr('field');
+                        // 取值
+                        var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                        // 如果大於0
+                        if (!isNaN(currentVal) && currentVal > 0) {
+                            // 減一
+                            $('input[name=' + fieldName + ']').val(currentVal - 1);
+                        } else {
+                            // 0
+                            $('input[name=' + fieldName + ']').val(0);
+                        }
+                    });
+                });
+                </script>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6" style="text-align: center ;padding-top:10px;">
+                    <h2>商品詳情</h2>
+                    <p>Touch ID 指紋辨識，1200萬畫數，siri 語音助理，ios 系統</p>
+                    <p>NCC:CCAI154G0120T0</br>
+                        型號:A1687<br>
+                        產地(國家):china<br>
+                        配件:全新副廠充電線，充電頭<br>
+                        保固期(月):3<br>
+                        技術規格:5.5寸，64GB容量，1200萬畫數，touch ID
+                    </p>
+                    <button class="button3">
+                        <p class="flip" onclick="myFunction()">使用說明</p>
+                    </button>
+                    <div id="panel">
+                        <font class="col-12" style="text-align: left;color: red;">
+                            <p>使用前請閱讀: <br>
+                                1）福利品主要為，公關機，展示機，舊換新機，或售後維修用途的備用貨品。貨品經過嚴格測試及整新侯在販售，過程中可能會涉及到維修以及更換零件。商品非新機，外觀依情況會有合理的使用痕跡，包括刮傷，撞傷等，但功能借正常無故障。 <br>2）商品非全新機，歸類為消耗品之零件會有合理消耗之情形，如電磁，防水效果，顯示器效果，但均在合理標準，超出標準會更換新零件。 <br>3）商品均過原廠保固期，或可能經過非原廠檢測以及維修，均無法參加任何原廠售後維修以及相關活動。<br>
+                                4）保固期為 3 個月，由非原廠廠商提供售後服務，非人故障廠商將提供免付費換貨或修復服務，保固期過後可另享有折扣付費維修服務。 <br>5）如果在7天鑒賞期需要辦理退貨，請還原出貨原狀，商品受到損壞以及配件缺少會依情況向買方求償。 <br>6）所有退貨以及送售後之商品都必須移除尋找我的 iPhone 功能，以及手機的畫面鎖，若未移除，會收取全額價值損失<br></p>
+                            <p>退換貨須知：<br><br>
+                                商品到貨隔日享蝦皮15天鑑賞(猶豫)期之權益【鑑賞(猶豫)期非試用期】，辦理退貨商品必
+                                ●3C相關商品，為一次性包裝商品，不可拆封或試用，請務必確認有購買需求後再拆封。須是全新狀態且包裝完整，否則將會影響退貨權限。<br>
+                                ●網頁商品會因為使用不同的品牌螢幕以及解析度不同，造成圖片顏色呈現略有不同，請以實品顏色為準。<br></p>
+                        </font>
+                    </div>
+                    <script>
+                        function myFunction() {
+                        document.getElementById("panel").style.display = "block";
+                    }
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align: center">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="col-12">
+                    </div>
+                    <section>
+                        <div class="row">
+                            <div class="col-12 box3">
+                                <input type="text" name="" required placeholder="請填寫留言">
+                                <input type="submit" name="" value="Login">
+                            </div>
+                        </div>
+                    </section>
+                    <div>
+                        <h1>留言板</h1>
+                    </div>
+                    <section>
+                        <div class="table-responsive-sm table-middle">
+                            <table class="table" style="color:white;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col-4"><label for="FirstName"> 姓名 </label></th>
+                                        <th scope="col-6"><label for="message"> 留言 </label></th>
+                                        <th scope="col-2"><label for="Time"> 日期 </label></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="FirstName"> 許柏聰 </label>
+                                        </td>
+                                        <td>
+                                            <label for="message"> 反送中 </label>
+                                        </td>
+                                        <td>
+                                            <label for="Time"> 2019/6/12 </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="FirstName"> 熊二 </label>
+                                        </td>
+                                        <td>
+                                            <label for="message"> 賣一堆垃圾 </label>
+                                        </td>
+                                        <td>
+                                            <label for="Time"> 2019/2/30 </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="FirstName"> 小明 </label>
+                                        </td>
+                                        <td>
+                                            <label for="message"> 一樓的那位你聽著，武警已經在路上了 </label>
+                                        </td>
+                                        <td>
+                                            <label for="FirstName"> 2019/20/99 </label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <input type="button" onclick="history.go(-1)" value="上一頁"></input>
+                                <input type="button" onclick="history.forward()" value="下一頁">
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6" style="font-weight:bolder;">
+                    <div class="panel-footer" align="center" style="text-align: center">瀏覽人數 :
+                        ???人
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="page-footer font-small unique-color-dark">
+            <div style="background-color: #2ecc71;">
+                <div class="gg py-3">
+                    您是第 1 位顧客
+                </div>
+            </div>
+            <div class="container text-center text-md-left mt-5">
+                <div class="row">
+                    <div class="col-md-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="">服務時間</h6>
+                        <hr class="mb-4 mt-0 d-inline-block" style="width">
+                        <p>平日週一至週五 09:00 ~ 23:00</p>
+                        <p>週末及國定假日 12:00 ~ 19:00</p>
+                        <p><i class="fas fa-phone mr-3"></i>服務號碼 (02)2518-2749</p>
+                        <a href="mailto:tonight0919@gmail.com" style="color: #FFF;"><i class="fas fa-envelope mr-3"></i>聯絡我們</a>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="">版權所有</h6>
+                        <hr class=" mb-4 mt-0 d-inline-block" style="width: 60px;">
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="">前端製作</h6>
+                        <hr class=" mb-4 mt-0 d-inline-block" style="width: 60px;">
+                        <img src="./images/product/twice.jpg" style="width: 70%;">
+                        <p>
+                            <a href=""><img src="icon/fb.png" style="width: 35px;"></a>
+                            <a href=""><img src="icon/ig.png" style="width: 30px;"></a>
+                            <a href=""><img src="icon/Github.png" style="width: 35px;"></a>
+                        </p>
+                        <img src="./images/product/twice.jpg" style="width: 70%;">
+                        <p>
+                            <a href=""><img src="icon/fb.png" style="width: 35px;"></a>
+                            <a href=""><img src="icon/ig.png" style="width: 30px;"></a>
+                            <a href=""><img src="icon/Github.png" style="width: 35px;"></a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-2  mx-auto mb-4">
+                        <h6 class="">後台製作</h6>
+                        <hr class=" mb-4 mt-0 d-inline-block" style="width: 60px;">
+                        <img src="./images/product/twice.jpg" style="width: 70%;">
+                        <p>
+                            <a href=""><img src="icon/fb.png" style="width: 35px;"></a>
+                            <a href=""><img src="icon/ig.png" style="width: 30px;"></a>
+                            <a href=""><img src="icon/Github.png" style="width: 35px;"></a>
+                        </p>
+                        <img src="./images/product/twice.jpg" style="width: 70%;">
+                        <p>
+                            <a href=""><img src="icon/fb.png" style="width: 35px;"></a>
+                            <a href=""><img src="icon/ig.png" style="width: 30px;"></a>
+                            <a href=""><img src="icon/Github.png" style="width: 35px;"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer -->
+    </section>
+</body>
+
+</html>
